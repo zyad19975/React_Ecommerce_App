@@ -14,7 +14,7 @@ import useStyles from "./style";
 
 import logo from "../../assets/commerce.png";
 
-const Navbar = () => {
+const Navbar = ({ totalItems }) => {
   const classes = useStyles();
   return (
     <div>
@@ -32,7 +32,7 @@ const Navbar = () => {
           <div className={classes.grow} />
           <div className={classes.button}>
             <IconButton arial-lable="Show Cart Items" color="ingerit">
-              <Badge badgeContent={3} color="secondary">
+              <Badge badgeContent={totalItems} color="secondary">
                 <ShoppingCart />
               </Badge>
             </IconButton>
